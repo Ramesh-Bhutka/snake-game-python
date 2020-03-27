@@ -4,7 +4,6 @@ from tkinter import messagebox
 import pygame
 from tkinter import *
 
-
 class cube(object):
     rows = 20
     w = 500
@@ -33,7 +32,6 @@ class cube(object):
             circleMiddle2 = (i * dis + dis - radius * 2, j * dis + 8)
             pygame.draw.circle(surface, (0, 0, 0), circleMiddle, radius)
             pygame.draw.circle(surface, (0, 0, 0), circleMiddle2, radius)
-
 
 class snake(object):
     body = []
@@ -124,7 +122,6 @@ class snake(object):
             else:
                 c.draw(surface)
 
-
 def drawGrid(w, rows, surface):
     sizeBtwn = w // rows
 
@@ -137,7 +134,6 @@ def drawGrid(w, rows, surface):
         pygame.draw.line(surface, (255, 255, 255), (x, 0), (x, w))
         pygame.draw.line(surface, (255, 255, 255), (0, y), (w, y))
 
-
 def redrawWindow(surface):
     global rows, width, s, snack
     surface.fill((0, 0, 0))
@@ -145,7 +141,6 @@ def redrawWindow(surface):
     snack.draw(surface)
     drawGrid(width, rows, surface)
     pygame.display.update()
-
 
 def randomSnack(rows, item):
     positions = item.body
@@ -160,7 +155,6 @@ def randomSnack(rows, item):
 
     return (x, y)
 
-
 def message_box(subject, content):
     root = Tk()
     root.attributes("-topmost", True)
@@ -170,7 +164,6 @@ def message_box(subject, content):
         root.destroy()
     except:
         pass
-
 
 def main():
     global width, rows, s, snack
