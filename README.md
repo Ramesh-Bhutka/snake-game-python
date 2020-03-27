@@ -1,2 +1,2 @@
-# snake-game-python
+# Snake-Game-Python
 Snake game with Python's Tkinter GUI 
